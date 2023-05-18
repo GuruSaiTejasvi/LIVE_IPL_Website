@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dropdown.js"></script>
+    <link rel="stylesheet" href="/main.css">
+    <title>iplLIVEscore</title>
+</head>
+<body>
+    <div class="inner_nav">
+    <img src="toss.png" style="position: absolute;z-index: -1;margin-left: 60px;margin-top:12px;opacity: 1;height: 58px;">
+    <img src="logo.png" style="height:75px;margin-left:30px;" >
+    <nav>
+        <a class="active" href="#home">Home</a>
+        <a class="active" href="#schedule">Schedule</a>
+        <a class="active" href="#orangecap">Orange Cap</a>
+        <a class="active" href="#purplecap">Purple Cap</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="Dropdown()">Teams</button>
+        <div class="dropdown-content">
+            <a href="#MI">Mumbai Indians</a>
+            <a href="#csk">Chennai Super Kings</a>
+            <a href="#gt">Gujarat Titans</a>
+            <a href="#RR">Rajasthan Royals</a>
+            <a href="#DC">Delhi Capitals</a>
+            <a href="#RCB">Royal Challengers Banglore</a>
+            <a href="#PK">Punjab Kings</a>
+            <a href="#KKR">Kolkata Knight Riders</a>
+            <a href="#SRH">Sunrisers Hyderabad</a>
+            <a href="#LSG">Lucknow Super Giants</a>
+        </div>
+        </div>
+    </nav>
+</div>
+    <div class="sidebar">
+        <!-- <img src="indiaflag.jpg" style="width: 100px; height: 70px; margin-left: 55px; display: block;"> -->
+        <p id="up">Upcoming Match</p>
+        <a href="#scorecard" style="text-decoration: none; color:aliceblue"><p>GT vs CSK</p></a>
+        <p>31 March 2023<br>07:30PM</p>
+        <p>T20 1 of 70</p>
+        <p style="font-size: xx-large;">________________</p>
+        <p id="bot">Previous Match</p>
+        <p>RR vs GT</p>
+        <p>29 May 2022</p>
+        <p>GT WON by 7 wickets</p>
+    </div>
+    <div id="teamsContainer">
+        <div><div id="pre">INDIAN</div></div>
+        <div id="bar"><div id="pre">PREMIER </div>
+        <div> <img src="/cup.png" alt="" style=" height: 100px;"></div>
+         <div><div id="pre">LEAGUE</div></div></div></div> 
+         
+<!-- 
+         <img src="/background-6.mm.png"  id="background" >
+        <div id="iconsTop">
+            <img class="image" src="MI.png" >
+            <img class="image" src="GT.png">
+            <img class="image" src="RR.png"  >
+            <img class="image" src="DC.png" >
+        </div>
+        <div id="iconsMid">
+            <img class="image" src="RCB.png" >
+            <img class="image" src="ipl.png">
+            <img class="image" src="CSK.png" >
+        </div>
+        <div id="iconsBottom">
+            <img class="image" src="PUJ.png" >
+            <img class="image" src="KKR.png" >
+            <img class="image" src="SRH.png" >
+            <img class="image" src="LSG.png" >
+        </div>  -->
+        <img src="bg.png" style="margin-left: 23%; width:750px;">
+        <div class="rightbar">
+           <p></p>
+        </div>
+    
+    
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="dropdown.js"></script>
+    <title>iplLIVEscore</title>
+    <style>
+        #teamsContainer{
+            height: 200px;
+            gap: 3vh;
+            display: inline-flex;
+            flex-direction: column;
+            margin-left: 30%;
+            margin-top: 0px;
+            justify-content: center;
+            align-items: center;
+        }
+        #bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            column-gap: 5vw;
+            margin-top: 0px;
+        }
+        #pre{
+            font: italic;
+            font-style:inherit;
+            margin: 0px;
+            padding: 0px;
+            font-family: serif;
+            font-size: 3.433333vi;
+            color: black;
+            
+        }
+        #background{
+            position: absolute;
+            height: auto;
+            width: 65vw;
+            z-index: -1;
+            
+        }
+        #iconsTop{
+            width: 59vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #iconsBottom{
+            width: 59vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        #iconsMid{
+            width: 50vw;
+            display: flex ;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        
+        .image{
+            height: 19vh;
+            width: auto;
+        }
+
+        nav{
+            display: inline-flex;
+            margin-left: 24%;
+            height: 50px;
+            width: 73%;
+            background-color: rgb(200, 175, 207);
+            float: right;
+            text-align: right;
+            text-transform: capitalize;
+            border-radius: 30px;
+            position: fixed;
+            box-shadow: 0px 5px 5px 5px rgb(200, 175, 207);
+        }
+        nav a{
+            text-align: right;
+            text-decoration: none;
+            margin: 0px 0px 10px 50px;
+            font-size: 23px;
+            padding: 10px 20px;
+            color: black;
+            float: right;
+        }
+        .active:hover{
+           background: #9c88b5;
+           border-radius: 2px;
+        }
+        .dropdown{
+            float:left;
+            overflow: hidden;
+            margin-top: 0px;;
+            margin-left: 0px;
+        }
+        .dropdown .dropbtn{
+            font-size: 23px;
+            margin: 0px 0px 10px 50px;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            background-color: inherit;
+            cursor: pointer;
+        }
+        nav a:hover, .dropdown:hover .dropbtn{
+            background: #9c88b5;
+        }
+        .dropdown-content{
+            display:none;
+            position: absolute;
+            min-width: 30px;
+            box-shadow: 0px 0px 0px 0px rgb(200, 175, 207);
+            background-color: rgb(200, 175, 207);
+            z-index: 1;
+        }
+        .dropdown-content a{
+            float: none;
+            text-align: left;
+            text-decoration: none;
+            font-size: large;
+            color:black;
+            display: block;
+        }
+        .dropdown:hover .dropdown-content{
+            display: block;
+        }
+        .sidebar{ 
+        margin-top: 245px;
+        text-align: center;
+        width: 23%;
+        font-size: larger;
+        background-color: rgb(200, 175, 207);
+        color: black;
+        height: 567px;
+        /* display: inline-flex; */
+        position: absolute;
+       } 
+       .up{
+        font-size: x-large;
+       }
+       .score{
+        text-decoration: none;
+        color:black;
+       }
+       .sugg{
+        text-align: center;
+        text-decoration: none;
+       }
+    </style>
+</head>
+<body>
+    <div class="inner_nav">
+    <img src="toss.png" style="position: fixed;z-index: -1;margin-left: 60px;margin-top:12px;opacity: 1;height: 58px;">
+    <img src="logo.png" style="height:75px;margin-left:30px; position: fixed;" >
+    <nav>
+        <a class="active" href="temp.html">Home</a>
+        <a class="active" href="#schedule">Schedule</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="Dropdown()">Teams</button>
+        <div class="dropdown-content">
+            <a href="miteam.html">Mumbai Indians</a>
+            <a href="cskteam.html">Chennai Super Kings</a>
+            <a href="gtteam.html">Gujarat Titans</a>
+            <a href="rrteam.html">Rajasthan Royals</a>
+            <a href="dcteam.html">Delhi Capitals</a>
+            <a href="rcbteam.html">Royal Challengers Banglore</a>
+            <a href="pkteam.html">Punjab Kings</a>
+            <a href="kkrteam.html">Kolkata Knight Riders</a>
+            <a href="srhteam.html">Sunrisers Hyderabad</a>
+            <a href="Lsgteam.html">Lucknow Super Giants</a>
+        </div>
+    </div>
+        <a class="active" href="#orangecap">Orange Cap</a>
+        <a class="active" href="#purplecap">Purple Cap</a>
+        
+    </nav>
+</div>
+    <div class="sidebar">
+        <a href="#scorecard" class="score">
+        <!-- <img src="indiaflag.jpg" style="width: 100px; height: 70px; margin-left: 55px; display: block;"> -->
+        <p id="up">Upcoming Match</p>
+        <p>GT vs CSK</p>
+        <p>31 March 2023<br>07:30PM</p>
+        <p>T20 1 of 70</p></a>
+        <p style="font-size: xx-large;color:aliceblue;">________________</p>
+        <p id="bot">Previous Match</p>
+        <p>RR vs GT</p>
+        <p>29 May 2022</p>
+        <p>GT WON by 7 wickets</p>
+    </div>
+    <br><br><br>
+    <div id="teamsContainer">
+        <div><div id="pre">INDIAN</div></div>
+        <div id="bar"><div id="pre">PREMIER </div>
+        <div> <img src="/cup.png" alt="" style=" height: 100px;"></div>
+         <div><div id="pre">LEAGUE</div></div></div></div> 
+         
+<!-- 
+         <img src="/background-6.mm.png"  id="background" >
+        <div id="iconsTop">
+            <img class="image" src="MI.png" >
+            <img class="image" src="GT.png">
+            <img class="image" src="RR.png"  >
+            <img class="image" src="DC.png" >
+        </div>
+        <div id="iconsMid">
+            <img class="image" src="RCB.png" >
+            <img class="image" src="ipl.png">
+            <img class="image" src="CSK.png" >
+        </div>
+        <div id="iconsBottom">
+            <img class="image" src="PUJ.png" >
+            <img class="image" src="KKR.png" >
+            <img class="image" src="SRH.png" >
+            <img class="image" src="LSG.png" >
+        </div>  -->
+        <img src="bg.png" style="margin-left: 25%; width:70%;">
+        <div>
+            <a href="https://www.hotstar.com/in"><h2 class="sugg"><b>Watch live on Disney Hotstar</b></h2></a>
+        </div>
+        <footer></footer>
+</body>
+</html>
